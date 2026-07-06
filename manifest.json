@@ -3,6 +3,8 @@
   "name": "Fresh Tab",
   "version": "1.0.2",
   "description": "Hard reload: wipe all site data for current page",
+  "homepage_url": "https://github.com/Dobrunia/fresh-tab",
+  "author": "Dobrunia",
   "permissions": [
     "activeTab",
     "browsingData",
@@ -13,8 +15,11 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "fresh-tab@local.dev",
-      "strict_min_version": "109.0"
+      "id": "fresh-tab@dobrunia.github",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
   "background": {

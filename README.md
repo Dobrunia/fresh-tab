@@ -1,46 +1,27 @@
 # Fresh Tab
 
-Hard reload расширение для Zen Browser (Firefox): одна кнопка на тулбаре очищает все site data текущей страницы и перезагружает её.
+Hard reload browser extension for Firefox and Zen Browser. One toolbar click clears all site data for the current page origin and reloads it.
 
-## Установка (temporary)
+## Usage
 
-1. Открой `about:debugging#/runtime/this-firefox` в Zen Browser.
-2. Нажми **Load Temporary Add-on…** и выбери `manifest.json` из этой папки.
-3. Закрепи иконку на тулбаре (Pin to Toolbar).
-4. После перезапуска браузера повтори шаги 1–2.
+Click the extension icon on an active tab → site data is cleared → hard reload.
 
-## Использование
+## What gets cleared
 
-Клик по иконке расширения на активной вкладке → очистка данных origin → hard reload.
-
-## Что очищается
-
-- Cookies (весь registrable domain)
-- localStorage и sessionStorage
+- Cookies (registrable domain)
+- localStorage and sessionStorage
 - IndexedDB
 - HTTP cache
-- Service Workers и Cache Storage
+- Service Workers and Cache Storage
 - File System API
-- Form autofill data для сайта
+- Form autofill data for the site
 
-## Проверка
+## Limitations
 
-1. Открой любую http/https страницу.
-2. В консоли DevTools выполни:
+- Works only on `http://` and `https://` pages.
+- Clears the main tab origin only, not third-party iframe storage.
+- Site permissions (notifications, camera, etc.) are not reset.
 
-```javascript
-localStorage.setItem("test", "1");
-sessionStorage.setItem("test", "1");
-document.cookie = "test=1; path=/";
-indexedDB.open("test-db");
-caches.open("test-cache");
-```
+## License
 
-3. Кликни иконку Fresh Tab.
-4. После reload проверь Application/Storage в DevTools — всё должно быть пусто.
-
-## Ограничения
-
-- Работает только на `http://` и `https://` страницах.
-- Очищается origin главной вкладки, не third-party iframe storage.
-- Permissions сайта (уведомления, камера и т.д.) не сбрасываются.
+MIT © [Dobrunia](https://github.com/Dobrunia)
