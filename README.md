@@ -2,6 +2,8 @@
 
 Hard reload browser extension for Firefox and Zen Browser. One toolbar click clears all site data for the current page origin and reloads it.
 
+**Install:** [Firefox Add-ons](https://addons.mozilla.org/ru/firefox/addon/dobrunia-fresh-tab/)
+
 ## Usage
 
 Click the extension icon on an active tab → site data is cleared → hard reload.
