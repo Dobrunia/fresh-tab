@@ -1,6 +1,6 @@
 {
   "name": "fresh-tab",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "Hard reload browser extension for Firefox and Zen Browser",
   "author": "Dobrunia (https://github.com/Dobrunia)",
